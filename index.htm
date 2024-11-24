@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="scores">
+        <p>Player X: <span id="score-x">0</span></p>
+        <p>Player O: <span id="score-o">0</span></p>
+    </div>
+    <div id="game-board"></div>
+    <p id="status">Player X's turn</p>
+    <div id="controls">
+        <button id="restart">Restart Game</button>
+        <button id="toggle-ai">AI: On</button>
+        <button id="advanced-mode">Advanced Mode</button>
+        <div id="advanced-settings" style="display: none;">
+            <label for="board-size">Board Size:</label>
+            <input type="number" id="board-size" value="3" min="3" max="10">
+            <button id="set-board">Set Board</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

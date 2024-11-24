@@ -1,0 +1,82 @@
+/* Updated style.css */
+
+#game-board {
+    display: grid;
+    gap: 5px;
+    margin: 20px auto;
+    width: fit-content;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Add default grid structure */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Cell animation when clicked */
+.cell.taken {
+    transform: scale(1.1);
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Highlight winning cells with a smooth color change */
+.cell.highlight {
+    background-color: #90ee90;
+    animation: highlightPulse 0.5s infinite alternate;
+}
+
+/* Shake the game board */
+#game-board.shake {
+    animation: shake 0.4s ease;
+}
+
+/* Fade-in animation for the cells */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Highlight pulse animation for winning cells */
+@keyframes highlightPulse {
+    from {
+        background-color: #90ee90;
+    }
+    to {
+        background-color: #32cd32;
+    }
+}
+
+/* Shake animation for the game board */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+}
